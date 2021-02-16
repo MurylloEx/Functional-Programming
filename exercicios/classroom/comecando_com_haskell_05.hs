@@ -1,7 +1,7 @@
 module Main where
 
     last' :: [a] -> a
-    last' xs = head $ reverse xs
+    last' xs = xs !! (length xs - 1)
 
     main :: IO ()
     main = do

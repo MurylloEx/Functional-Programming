@@ -1,8 +1,13 @@
 module Main where
 
-    reverter' :: String -> [Char] 
-    reverter' x = [ chr | chr<-reverse x ]
+    reverter' :: [String] -> [String] 
+    reverter' xs = [ reverse x | x <- xs ]
 
     main :: IO ()
     main = do
-        print $ reverter' "String em Haskell"
+        print $ reverter' 
+            [
+                "String em Haskell", 
+                "Muryllo", 
+                "Livro de Haskell"
+            ]

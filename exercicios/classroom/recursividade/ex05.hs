@@ -7,7 +7,7 @@ and' (x:xs) = x && and' xs
 -- B)
 concat' :: [[a]] -> [a]
 concat' [] = []
-concat' (x:xs) = [head x] ++ tail x ++ concat' xs
+concat' (x:xs) = x ++ concat' xs
 
 -- C)
 replicate' :: Int -> a -> [a]
